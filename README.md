@@ -9,14 +9,14 @@ Projeto de desenvolvimento mobile “Já Tomei”
 
 # Progresso do Desenvolvimento
 
-Status atual: **Versão 1.2**
+Status atual: **Versão 1.3**
 
 | Versão | Status | Descrição |
 |--------|--------|-----------|
 | 1.0 | V | Definição da proposta do aplicativo, elaboração da documentação inicial, wireframe manual e refinamento do wireframe digital. |
 | 1.1 | V | Criação do projeto Android, definição da arquitetura MVVM, navegação entre telas, construção da interface principal, componentes reutilizáveis, testes do cálculo do ciclo e estrutura inicial do banco de dados Room. |
 | 1.2 | V | Implementação da persistência do ciclo contraceptivo utilizando Room Database, criação do Repository e ViewModel, desenvolvimento da tela funcional de configuração do ciclo, validação dos dados informados e armazenamento permanente das configurações da usuária. |
-| 1.3 |  | Integração do calendário principal com os dados reais do ciclo contraceptivo. |
+| 1.3 | V | Integração do calendário principal com os dados reais do ciclo contraceptivo. |
 | 1.4 |  | Implementação das notificações inteligentes e confirmação da tomada da medicação. |
 | 2.0 |  | Primeira versão completa do aplicativo, contemplando todas as funcionalidades propostas no projeto acadêmico. |
 
@@ -55,6 +55,24 @@ Principais alterações:
 - Recuperação dos dados ao reabrir o aplicativo;
 - Estrutura preparada para integração do calendário com dados reais.
 
+## Versão 1.3
+Nesta versão foi realizada a integração entre o calendário principal e os dados reais cadastrados pela usuária.
+
+Principais alterações:
+- Integração do calendário com o ciclo armazenado no Room Database;
+- Remoção dos dados fictícios utilizados anteriormente na tela principal;
+- Geração automática dos dias ativos da cartela;
+- Identificação automática dos períodos de pausa;
+- Projeção automática das cartelas seguintes;
+- Implementação da navegação entre os meses do calendário;
+- Criação de indicadores visuais para os dias ativos, pausa, data atual e dias inativos;
+- Melhoria da legenda dos indicadores do calendário;
+- Exibição dinâmica do status do ciclo;
+- Identificação do número atual do comprimido durante a cartela;
+- Identificação do dia atual da pausa;
+- Cálculo automático da próxima medicação;
+- Ampliação dos testes unitários do cálculo do ciclo, totalizando 13 testes aprovados.
+
 # Roadmap
 
 - [x] Planejamento do aplicativo
@@ -63,7 +81,7 @@ Principais alterações:
 - [x] Arquitetura MVVM
 - [x] Persistência com Room
 - [x] Cadastro do ciclo contraceptivo
-- [ ] Calendário inteligente
+- [X] Calendário inteligente
 - [ ] Notificações automáticas
 - [ ] Confirmação da tomada
 - [ ] Histórico de utilização
