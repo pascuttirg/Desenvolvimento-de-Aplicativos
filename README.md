@@ -17,7 +17,7 @@ Status atual: **Versão 1.3**
 | 1.1 | V | Criação do projeto Android, definição da arquitetura MVVM, navegação entre telas, construção da interface principal, componentes reutilizáveis, testes do cálculo do ciclo e estrutura inicial do banco de dados Room. |
 | 1.2 | V | Implementação da persistência do ciclo contraceptivo utilizando Room Database, criação do Repository e ViewModel, desenvolvimento da tela funcional de configuração do ciclo, validação dos dados informados e armazenamento permanente das configurações da usuária. |
 | 1.3 | V | Integração do calendário principal com os dados reais do ciclo contraceptivo. |
-| 1.4 |  | Implementação das notificações inteligentes e confirmação da tomada da medicação. |
+| 1.4 | V | Implementação das notificações inteligentes e confirmação da tomada da medicação. |
 | 2.0 |  | Primeira versão completa do aplicativo, contemplando todas as funcionalidades propostas no projeto acadêmico. |
 
 # Changelog
@@ -73,6 +73,16 @@ Principais alterações:
 - Cálculo automático da próxima medicação;
 - Ampliação dos testes unitários do cálculo do ciclo, totalizando 13 testes aprovados.
 
+## Versão 1.4
+
+Nesta versão foi implementado o sistema de lembretes e confirmação da medicação.
+Foram adicionadas notificações para lembrar o horário de tomar o anticoncepcional, utilizando o horário configurado pela usuária e respeitando os dias ativos e os períodos de pausa do ciclo.
+Também foi implementada a opção de adiar o lembrete conforme o intervalo configurado no ciclo.
+A confirmação da medicação passou a ser salva no banco de dados, permitindo registrar quais dias foram confirmados e impedir confirmações duplicadas. Após a confirmação, o calendário é atualizado automaticamente e o botão "Já tomei!" passa a indicar que a medicação do dia já foi tomada.
+O histórico também passou a utilizar os dados reais salvos no aplicativo, permitindo navegar entre os meses e visualizar os dias tomados, pendentes e não confirmados. Foi adicionado um resumo mensal com a quantidade de tomadas, não confirmadas e o percentual de adesão.
+Também foram realizados testes no sistema de notificações, confirmação, persistência dos dados, mudança automática dos estados dos dias e cálculo da adesão. Foi corrigido um problema em que uma notificação ainda poderia ser exibida após a confirmação da medicação.
+Com isso, a versão 1.4 possui o fluxo principal de acompanhamento da medicação funcionando de forma integrada.
+
 # Roadmap
 
 - [x] Planejamento do aplicativo
@@ -82,9 +92,9 @@ Principais alterações:
 - [x] Persistência com Room
 - [x] Cadastro do ciclo contraceptivo
 - [X] Calendário inteligente
-- [ ] Notificações automáticas
-- [ ] Confirmação da tomada
-- [ ] Histórico de utilização
+- [X] Notificações automáticas
+- [X] Confirmação da tomada
+- [X] Histórico de utilização
 - [ ] Configurações do aplicativo
 - [ ] Versão final (v2.0)
 
