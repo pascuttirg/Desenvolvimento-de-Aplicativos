@@ -17,7 +17,7 @@ Status atual: **Versão 1.3**
 | 1.3 | V | Integração do calendário principal com os dados reais do ciclo contraceptivo. |
 | 1.4 | V | Implementação das notificações inteligentes e confirmação da tomada da medicação. |
 | 1.5 | V | Revisão das implementações anteriores e ajustes de bugs. |
-| 2.0 |  | Primeira versão completa do aplicativo, contemplando todas as funcionalidades propostas no projeto acadêmico. |
+| 1.6 | V| Primeira versão completa do aplicativo, contemplando todas as funcionalidades propostas no projeto acadêmico. |
 
 # Changelog
 
@@ -142,6 +142,52 @@ O aplicativo agora consegue acompanhar automaticamente:
 **Cartela ativa → lembrete → confirmação → próximo lembrete → pausa → retomada da próxima cartela.**
 Com isso, a versão 1.5 foi concluída e o projeto está preparado para a etapa final de revisão, testes e documentação.
 
+## Versão 1.6
+A versão 1.6 foi dedicada à revisão final do projeto, limpeza do código, validação da aplicação e geração do APK da versão final do **Já Tomei**.
+Nesta etapa, as funcionalidades desenvolvidas nas versões anteriores foram revisadas e testadas de forma integrada, garantindo o funcionamento do fluxo completo de gerenciamento do ciclo e dos lembretes.
+
+### Atividades realizadas
+- Revisão final da estrutura do projeto;
+- Limpeza de imports não utilizados;
+- Busca por códigos temporários, TODOs e elementos utilizados durante o desenvolvimento;
+- Execução de Clean e Build completo do projeto;
+- Validação da compilação sem erros;
+- Geração do APK de debug;
+- Instalação limpa do APK no emulador Android;
+- Validação das permissões necessárias;
+- Teste completo do fluxo de cadastro do ciclo;
+- Teste do disparo das notificações;
+- Teste de confirmação da tomada;
+- Teste de reagendamento automático do próximo lembrete;
+- Teste da função de adiamento do lembrete;
+- Teste de persistência dos dados após fechamento e reinicialização do aplicativo;
+- Validação do calendário e dos períodos de pausa;
+- Validação do histórico de tomadas e do cálculo de adesão.
+
+### Validação final
+O APK foi instalado diretamente no emulador, sem execução pelo Android Studio, permitindo simular uma instalação limpa da aplicação.
+
+Foram validados os principais fluxos do aplicativo:
+1. Instalação e primeira execução;
+2. Solicitação e concessão das permissões;
+3. Cadastro de uma nova cartela;
+4. Exibição correta do ciclo na tela inicial;
+5. Disparo da notificação no horário configurado;
+6. Confirmação da tomada;
+7. Atualização do calendário;
+8. Reagendamento automático do próximo lembrete;
+9. Persistência dos dados;
+10. Consulta ao histórico de tomadas.
+
+Todos os testes finais foram concluídos com sucesso.
+
+### Status da Versão
+**Versão 1.6 concluída com sucesso.**
+
+Com a conclusão desta versão, o aplicativo **Já Tomei** possui uma versão funcional e validada, contemplando o fluxo proposto para o projeto acadêmico.
+
+A publicação na Google Play Store não faz parte do escopo desta versão, tendo em vista que a entrega final não contempla esta etapa.
+
 # Roadmap
 
 - [x] Planejamento do aplicativo
@@ -155,7 +201,7 @@ Com isso, a versão 1.5 foi concluída e o projeto está preparado para a etapa 
 - [X] Confirmação da tomada
 - [X] Histórico de utilização
 - [X] Configurações do aplicativo
-- [ ] Versão final (v2.0)
+- [X] Versão final (v1.6)
 
 # 1-	Descrição do projeto
 
