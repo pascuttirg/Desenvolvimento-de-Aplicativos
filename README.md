@@ -16,6 +16,7 @@ Status atual: **Versão 1.3**
 | 1.2 | V | Implementação da persistência do ciclo contraceptivo utilizando Room Database, criação do Repository e ViewModel, desenvolvimento da tela funcional de configuração do ciclo, validação dos dados informados e armazenamento permanente das configurações da usuária. |
 | 1.3 | V | Integração do calendário principal com os dados reais do ciclo contraceptivo. |
 | 1.4 | V | Implementação das notificações inteligentes e confirmação da tomada da medicação. |
+| 1.5 | V | Revisão das implementações anteriores e ajustes de bugs. |
 | 2.0 |  | Primeira versão completa do aplicativo, contemplando todas as funcionalidades propostas no projeto acadêmico. |
 
 # Changelog
@@ -95,6 +96,52 @@ Principais alterações:
 - Validação da confirmação antes do envio de uma notificação, evitando lembretes após a medicação já ter sido registrada;
 - Realização de testes funcionais de notificações, confirmação, persistência dos dados, histórico e cálculo de adesão.
 
+## Versão 1.5
+Nesta versão o foco do projeto foi a implementação e validação do sistema de lembretes da medicação, garantindo que as notificações acompanhem corretamente o ciclo cadastrado pela usuária.
+
+### Principais alterações:
+- Agendamento de notificações no horário configurado para a medicação.
+- Utilização do `AlarmManager` para agendamento dos lembretes.
+- Utilização de alarmes exatos quando permitido pelo sistema.
+- Recebimento dos alarmes através do `ReminderReceiver`.
+- Exibição da notificação mesmo com o aplicativo em segundo plano.
+- Funcionamento da notificação após reinicialização do dispositivo.
+- Reagendamento automático do próximo lembrete.
+- Reagendamento após a confirmação da medicação.
+- Função de adiamento do lembrete.
+- Atualização automática da Home ao retornar ao aplicativo.
+- Atualização do calendário conforme o dia atual.
+- Bloqueio das ações de confirmação e adiamento durante o período de pausa.
+- Suspensão automática dos lembretes durante a pausa da cartela.
+- Retomada automática dos lembretes após o período de pausa.
+- Cancelamento do alarme ao excluir o ciclo.
+- Tratamento da interface quando nenhum ciclo está cadastrado.
+
+### Testes realizados
+Durante a Sprint foram realizados testes manuais utilizando o emulador Android e ferramentas de depuração do Android Studio.
+
+Foram validados os seguintes cenários:
+1. Disparo da notificação no horário configurado.
+2. Funcionamento da notificação com o aplicativo em segundo plano.
+3. Funcionamento após reinicialização do dispositivo.
+4. Adiamento do lembrete.
+5. Confirmação da medicação e reagendamento para o próximo dia.
+6. Alteração do horário da medicação.
+7. Atualização da interface após mudança de data.
+8. Entrada automática no período de pausa.
+9. Ausência de notificações durante a pausa.
+10. Agendamento automático para o primeiro dia da próxima cartela.
+11. Exclusão do ciclo e cancelamento do próximo alarme.
+12. Estado da Home sem ciclo cadastrado.
+
+Os alarmes também foram verificados através do `adb shell dumpsys alarm`, permitindo confirmar as datas e horários registrados pelo sistema Android.
+
+### Resultado da versão 1.5
+O sistema de lembretes foi integrado ao ciclo de medicação e os principais fluxos foram validados com sucesso.
+O aplicativo agora consegue acompanhar automaticamente:
+**Cartela ativa → lembrete → confirmação → próximo lembrete → pausa → retomada da próxima cartela.**
+Com isso, a versão 1.5 foi concluída e o projeto está preparado para a etapa final de revisão, testes e documentação.
+
 # Roadmap
 
 - [x] Planejamento do aplicativo
@@ -107,7 +154,7 @@ Principais alterações:
 - [X] Notificações automáticas
 - [X] Confirmação da tomada
 - [X] Histórico de utilização
-- [ ] Configurações do aplicativo
+- [X] Configurações do aplicativo
 - [ ] Versão final (v2.0)
 
 # 1-	Descrição do projeto
